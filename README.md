@@ -1,17 +1,17 @@
-# tic-tac-toe
-This is a tic-tac-toe Game written in JavaScript
-Tic Tac Toe Game in JavaScript
+# Takky
+This is a Takky Game written in JavaScript
+Takky Game in JavaScript
 
 #Overview
 
-Welcome to the Tic Tac Toe game repository! This simple web-based game allows two players to take turns marking spaces on a 3x3 grid, aiming to get three in a row horizontally, vertically, or diagonally. The game is implemented using HTML, CSS, and JavaScript.
+Welcome to the Takky game repository! This simple web-based game allows two players to take turns marking spaces on a 3x3 grid, aiming to get three in a row horizontally, vertically, or diagonally. The game is implemented using HTML, CSS, and JavaScript.
 
 #How to Play
 
 Clone the repository to your local machine.
 bash
 Copy code
-git clone https://github.com/your-username/tic-tac-toe.git
+git clone https://github.com/your-username/Takky.git
 Open the index.html file in your web browser.
 The game will start, and you can take turns by clicking on the empty spaces on the grid.
 The game will automatically detect a winner or a tie and display the result.
