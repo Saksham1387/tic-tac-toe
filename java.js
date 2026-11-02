@@ -4,6 +4,7 @@ let newgameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 let turn0 = true;
+let count = 0; // To track moves for draw detection
 
 let winPattrn = [
     [0,1,2],
@@ -16,6 +17,13 @@ let winPattrn = [
     [6,7,8],
 ];
 
+const resetGame = () =>{
+    turn0 = true;
+    count = 0;
+    enableBoxes();
+    msgContainer.classList.add("hide");
+};
+
 boxes.forEach((box) =>{
     box.addEventListener("click",()=>{
         if(turn0){
@@ -25,17 +33,21 @@ boxes.forEach((box) =>{
             box.innerText = "X";
             turn0 = true;
         }
-        box.disabled =true;
+        box.disabled = true;
+        count++;
 
-        checkWinner();
+        let isWinner = checkWinner();
+
+        if (count === 9 && !isWinner) {
+            gameDraw();
+        }
     })
 });
 
-
-const resetGame = () =>{
-    turn0 = true;
-    enableBoxes();
-    msgContainer.classList.add("hide");
+const gameDraw = () => {
+    msg.innerText = "Game was a Draw.";
+    msgContainer.classList.remove("hide");
+    disableBoxes();
 };
 
 const disableBoxes = () =>{
@@ -57,7 +69,6 @@ const showWinner = (winner) =>{
     disableBoxes();
 };
 
-
 const checkWinner = () =>{
     for(let pattern of winPattrn){
         let pos1val = boxes[pattern[0]].innerText;
@@ -66,13 +77,12 @@ const checkWinner = () =>{
         
         if(pos1val != "" && pos2val != "" && pos3val != "" ){
             if(pos1val === pos2val && pos2val === pos3val){
-                
                 showWinner(pos1val);
+                return true;
             }
         }
-
     }
-
+    return false;
 }; 
 
 newgameBtn.addEventListener("click",resetGame);
