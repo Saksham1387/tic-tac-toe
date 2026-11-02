@@ -1,10 +1,10 @@
 # tic-tac-toe
 This is a tic-tac-toe Game written in JavaScript
-Tic Tac Toe Game in JavaScript
+sikky Game in JavaScript
 
 #Overview
 
-Welcome to the Tic Tac Toe game repository! This simple web-based game allows two players to take turns marking spaces on a 3x3 grid, aiming to get three in a row horizontally, vertically, or diagonally. The game is implemented using HTML, CSS, and JavaScript.
+Welcome to the sikky game repository! This simple web-based game allows two players to take turns marking spaces on a 3x3 grid, aiming to get three in a row horizontally, vertically, or diagonally. The game is implemented using HTML, CSS, and JavaScript.
 
 #How to Play
 
